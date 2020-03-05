@@ -18,13 +18,25 @@ public class TestCases
     @Test
     public void givenLastName_WhenProper_ShouldReturnTrue()
     {
-        boolean result = validator.FirstName("Abc");
+        boolean result = validator.LastName("Abc");
         Assert.assertTrue(result);
     }
     @Test
     public void givenLastName_WhenInvalid_ShouldReturnFalse()
     {
-        boolean result = validator.FirstName("abcV");
+        boolean result = validator.LastName("abcV");
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void givenEmailId_WhenValid_ShouldReturnTrue()
+    {
+        boolean result = validator.EmailId("abc@yahoo.com");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public  void givenEmaiId_WhenInValid_ShouldReturnFalse()
+    {
+        boolean result = validator.EmailId("abc123@.com.com");
         Assert.assertFalse(result);
     }
 }
