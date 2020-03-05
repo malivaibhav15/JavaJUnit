@@ -51,4 +51,16 @@ public class TestCases
         boolean result = validator.MobileNumber("01 123456789");
         Assert.assertFalse(result);
     }
+    @Test
+    public void givenPassword_WhenValid_ShouldReturnTrue()
+    {
+        boolean result = validator.PassWord("AbCdEfGhIjK");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_WhenInValid_ShouldReturnFalse()
+    {
+        boolean result = validator.PassWord("abcdefg");
+        Assert.assertFalse(result);
+    }
 }
