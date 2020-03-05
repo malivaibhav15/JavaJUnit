@@ -39,4 +39,16 @@ public class TestCases
         boolean result = validator.EmailId("abc123@.com.com");
         Assert.assertFalse(result);
     }
+    @Test
+    public void givenMobileNumber_WhenValid_ShouldReturnTrue()
+    {
+        boolean result = validator.MobileNumber("11 1234567890");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenMobileNumber_WhenInvalid_ShouldReturnFalse()
+    {
+        boolean result = validator.MobileNumber("01 123456789");
+        Assert.assertFalse(result);
+    }
 }
