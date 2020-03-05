@@ -1,5 +1,4 @@
 import java.util.regex.Pattern;
-
 public class UserRegistration
 {
     String pattern = "^[A-Z][a-zA-Z]{2,}$";
@@ -7,9 +6,12 @@ public class UserRegistration
         System.out.println("Welcome to user registration");
 
     }
-
     public boolean FirstName(String firstName)
     {
         return Pattern.matches(pattern, firstName);
+    }
+    public boolean LastName(String lastName)
+    {
+        return Pattern.matches(pattern, lastName);
     }
 }
