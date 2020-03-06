@@ -54,13 +54,13 @@ public class TestCases
     @Test
     public void givenPassword_WhenValid_ShouldReturnTrue()
     {
-        boolean result = validator.PassWord("AbCdEfGhIjK");
+        boolean result = validator.PassWord("djjhgSSSFjhg");
         Assert.assertTrue(result);
     }
     @Test
     public void givenPassword_WhenInValid_ShouldReturnFalse()
     {
-        boolean result = validator.PassWord("abcdefg");
+        boolean result = validator.PassWord("abcdeffg");
         Assert.assertFalse(result);
     }
 }

@@ -26,7 +26,7 @@ public class UserRegistration
     }
     public boolean PassWord(String password)
     {
-        String patern = "^[a-zA-Z]{8,}$";
-        return Pattern.matches(patern, password);
+        String pattern = "^[a-zA-Z]{7,}[A-Z]{1} *[a-zA-Z]*$";
+        return Pattern.matches(pattern, password);
     }
 }
