@@ -63,4 +63,25 @@ public class TestCases
         boolean result = validator.PassWord("abcdeffg");
         Assert.assertFalse(result);
     }
+    @Test
+    public void givenEmail_WhenInvalid_ShouldReturnFalse() {
+        String array1[]={"abc","abc()*@gmail.com","abc@.com.my","abc123@gmaila",
+                "abc123@.com","abc123@.com.com",".abc#$abc.com","abc()*@gm.ail.om",
+                "abc@%*.com","abc..2002@gmail.com","abc@.@gmail.com","abc@abc@gmail.com",
+                "abc@gmail.com.1a","abc@gmail.com.aa.au"};
+        for(int index1=0;index1<array1.length;index1++) {
+            boolean Email = validator.EmailId(array1[index1]);
+            Assert.assertFalse(Email);
+        }
+    }
+    @Test
+    public void givenEmail_WhenValid_ShouldReturnTrue() {
+        String array[]={"abc.xyz@bl.co.in","abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com",
+                "abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au",
+                "abc@gmail.com.com","abc+100@gmail.com"};
+        for(int index=0;index<array.length;index++){
+            boolean email=validator.EmailId(array[index]);
+            Assert.assertTrue(email);
+        }
+    }
 }

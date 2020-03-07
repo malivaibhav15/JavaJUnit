@@ -26,7 +26,7 @@ public class UserRegistration
     }
     public boolean PassWord(String password)
     {
-        String pattern = "(?=.*[0-9d])(?=.*[a-z])(?=.*[A-Z])(.{8,}[0-9A-Za-z]*[!@|^&*#%$]{1}[0-9A-Za-z]*)";
+        String pattern = "(?=.*[0-9d])(?=.*[a-z])(?=.*[A-Z])(.{7,}[0-9A-Za-z]*[!@|^&*#%$]{1}[0-9A-Za-z]*)";
         return Pattern.matches(pattern, password);
     }
 }
